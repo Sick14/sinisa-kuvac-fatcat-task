@@ -1,8 +1,21 @@
 import clsx from 'clsx';
+import React from 'react';
+import { Button } from 'components/Button';
 
-import { Button } from './Button.jsx';
+interface CardData {
+    title: string;
+    image: string;
+    description: string;
+    background: string;
+    onClick: () => void;
+    buttonText: string;
+}
 
-export const Cards = ({ cards }) => {
+interface CardsProps {
+    cards: CardData[];
+}
+
+export const Cards: React.FC<CardsProps> = ({ cards }) => {
     return (
         <div className={clsx('flex', 'justify-center', 'items-center')}>
             <div className={clsx('grid', 'grid-cols-2', 'gap-8', 'w-8/12')}>

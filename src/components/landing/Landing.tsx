@@ -1,11 +1,17 @@
 import clsx from 'clsx';
+import React from 'react';
+import { Card } from 'components/landing/Card';
 
-import { Card } from './Card.jsx';
+declare const __CWD__: string;
+const vscodeProjectLink: string = `vscode://file/${__CWD__}`;
 
-// eslint-disable-next-line no-undef
-const vscodeProjectLink = `vscode://file/${__CWD__}`;
+interface CardData {
+    title: string;
+    text: string;
+    link: string;
+}
 
-const cards = [
+const cards: CardData[] = [
     {
         title: 'Transfer the project to TypeScript',
         text: 'Your first task involves transitioning this project from JavaScript to TypeScript.',
@@ -28,7 +34,7 @@ const cards = [
     },
 ];
 
-export const Landing = () => {
+export const Landing: React.FC = () => {
     return (
         <section
             className={clsx(

@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "strict": true,
+      "strictNullChecks": true,
+      "noImplicitAny": true,
+      "noImplicitThis": true,
+      "jsx": "react",
+      "baseUrl": "./src",
+      "esModuleInterop": true,
+      "paths": {
+        "@sinisa-kuvac-fatcat-task/*": ["./src/*"]
+      }
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "dist"]
+  }
