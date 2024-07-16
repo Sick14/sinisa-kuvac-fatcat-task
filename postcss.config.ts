@@ -1,13 +1,10 @@
-import autoprefixer from 'autoprefixer';
 import tailwindcss from 'tailwindcss';
-import { UserConfig } from 'vite';
+import autoprefixer from 'autoprefixer';
 
-const config: UserConfig['css'] = {
-  postcss: {
-    plugins: [
-      tailwindcss,
-      autoprefixer,
-    ],
+const config = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
   },
 };
 

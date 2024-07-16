@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import { Card } from 'components/landing/Card';
+import { Card } from './Card';
 
 declare const __CWD__: string;
 const vscodeProjectLink: string = `vscode://file/${__CWD__}`;
