@@ -2,15 +2,15 @@ import React from 'react';
 import Marquee from 'react-fast-marquee';
 
 interface TrustBarProps {
-    images: string[];
+    trustText: string;
 }
 
-export const TrustBar: React.FC<TrustBarProps> = ({ images }) => {
+export const TrustBar: React.FC<TrustBarProps> = ({ trustText }) => {
     return (
         <Marquee>
-            {images.map((image) => (
-                <img width={100} key={image} src={image} className="mx-10" />
-            ))}
+            <div className="flex items-center space-x-4">
+                <span className="font-bold">{trustText}</span>
+            </div>
         </Marquee>
     );
 };
