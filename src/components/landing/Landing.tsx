@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Card } from './Card';
+import CreatePostForm from '../form/CreateForm';
 
 declare const __CWD__: string;
 const vscodeProjectLink: string = `vscode://file/${__CWD__}`;
@@ -118,6 +119,22 @@ export const Landing: React.FC = () => {
                 {cards.map((card) => (
                     <Card key={card.title} {...card} />
                 ))}
+            </div>
+            <div
+                className={clsx(
+                    'col-span-full',
+                    'flex',
+                    'flex-col',
+                    'gap-6',
+                    'items-start',
+                    'self-center',
+                    'w-full'
+                )}
+            >
+                <h2 className={clsx('text-2xl', 'text-black')}>
+                    Create a New Post
+                </h2>
+                <CreatePostForm />
             </div>
         </section>
     );
